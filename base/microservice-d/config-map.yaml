@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservice-d-config
+  labels:
+    app: microservice-d
+data:
+  ENV: production

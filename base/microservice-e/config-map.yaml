@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservice-e-config
+  labels:
+    app: microservice-e
+data:
+  ENV: production
