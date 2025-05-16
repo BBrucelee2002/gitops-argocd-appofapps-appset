@@ -9,7 +9,7 @@ spec:
         elements:
           - env: dev
           - env: staging
-          # - env: prod
+          - env: prod
   template:
     metadata:
       name: '{{env}}-apps'
