@@ -8,8 +8,11 @@ spec:
     - list:
         elements:
           - env: dev
+            namespace: dev
           - env: staging
+            namespace: staging
           - env: prod
+            namespace: prod
   template:
     metadata:
       name: '{{env}}-apps'
@@ -21,7 +24,7 @@ spec:
         path: environments/{{env}}
       destination:
         server: https://kubernetes.default.svc
-        namespace: default
+        namespace: '{{namespace}}'   
       syncPolicy:
         automated:
           prune: true
