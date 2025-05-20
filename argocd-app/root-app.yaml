@@ -6,13 +6,10 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/BBrucelee2002/gitops-argocd-appofapps-appset.git
+    repoURL: https://github.com/BB2/gitops-argocd-appofapps-appset.git
     targetRevision: HEAD
     path: argocd-app/appset
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  syncPolicy: {}
